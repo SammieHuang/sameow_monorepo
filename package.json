@@ -1,0 +1,17 @@
+{
+  "name": "sameow-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.25.0",
+  "workspaces":[
+    "apps/*", 
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "echo \"root: no dev script yet\"",
+    "build": "echo \"root: no build script yet\"",
+    "test": "echo \"root: no tests yet\""
+  },
+  "author": "",
+  "license": "ISC"
+}
