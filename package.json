@@ -3,8 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "packageManager": "pnpm@10.25.0",
-  "workspaces":[
-    "apps/*", 
+  "workspaces": [
+    "apps/*",
     "packages/*"
   ],
   "scripts": {
