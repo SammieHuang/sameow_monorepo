@@ -1,4 +1,5 @@
 import React from "react";
+import "./Button.css";
 
 type ButtonProps = {
   label?: string;
@@ -14,3 +15,4 @@ export function Button({ label = "Click me", onClick }: ButtonProps) {
 }
 
 export default Button;
+

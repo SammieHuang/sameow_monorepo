@@ -18,6 +18,7 @@ export const Basic: Story = {
 
 export const CustomLabel: Story = {
   args: {
-    label: "I'm a custom button 🙂",
+    label: "Click Haha",
   },
 };
+

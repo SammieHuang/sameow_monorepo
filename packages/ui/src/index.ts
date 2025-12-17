@@ -1,5 +1,5 @@
 // Original Button component
-export { Button, default } from "./components/Button";
+export { Button, default } from "./components/Button/Button";
 
 // shadcn/ui Button component
 export { Button as ShadcnButton, buttonVariants } from "./components/ui/button";
