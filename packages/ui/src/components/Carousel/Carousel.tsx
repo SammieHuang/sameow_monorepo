@@ -12,6 +12,7 @@ export const Carousel = ({ imageUrls }: CarouselProps) => {
     const [positionIndex, setPositionIndex] = useState<number>(1);
     const [onTransition, setOnTransition] = useState<boolean>(true);
     const slideCounts = imageUrls.length 
+
     const images = useMemo(
         () => [imageUrls[slideCounts - 1], ...imageUrls, imageUrls[0]]
         , [imageUrls]);
@@ -75,7 +76,6 @@ export const Carousel = ({ imageUrls }: CarouselProps) => {
                         >
                         </button>
                     ))}
-
                 </div>
             </div>        
         </>

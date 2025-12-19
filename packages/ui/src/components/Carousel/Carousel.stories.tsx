@@ -29,10 +29,3 @@ export const WithFewImages: Story = {
     imageUrls: images.slice(0, 3),
   },
 };
-
-export const WithSingleImage: Story = {
-  args: {
-    imageUrls: [images[0]],
-  },
-};
-
