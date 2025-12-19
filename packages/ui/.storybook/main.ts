@@ -15,8 +15,10 @@ const config: StorybookConfig = {
     const path = await import("path");
     const { fileURLToPath } = await import("url");
     const __dirname = path.dirname(fileURLToPath(import.meta.url));
+    const isCI = process.env.CI === 'true';
     
     return mergeConfig(config, {
+      base: isCI ? '/sameow_monorepo/' : '/',
       resolve: {
         alias: {
           "@": path.resolve(__dirname, "../src"),
