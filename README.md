@@ -2,39 +2,16 @@
 
 A monorepo for managing multiple packages and applications.
 
-## Project Structure
-.
-├─ .github/
-│  └─ workflows/
-│     └─ storybook-pages.yml
-├─ packages/
+packages/ui/src/
+├─ components/
+│  ├─ Button/
 │  └─ ui/
-│     ├─ .storybook/
-│     └─ src/
-│        ├─ components/
-│        │  ├─ Button/
-│        │  ├─ Carousel/
-│        │  └─ ui/
-│        ├─ lib/
-│        ├─ styles/
-│        ├─ index.ts
-│        ├─ types.ts
-│        └─ vite-env.d.ts
-│        ├─ Welcome.stories.tsx
-│        └─ Welcome.tsx
-└─ apps/
-   └─ demo/
-      ├─ pages/
-      │  ├─ login/
-      │  ├─ signup/
-      │  └─ dashboard/
-      ├─ layout/
-      │  └─ app/
-      ├─ data/
-      │  └─ mock/
-      └─ app/
-         └─ router/
-
+├─ demo/
+│  ├─ LoginPage/
+│  └─ SignupPage/
+├─ styles/
+├─ lib/
+├─ index.ts
 
 ## Packages
 
