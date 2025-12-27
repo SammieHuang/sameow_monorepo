@@ -1,7 +1,10 @@
+import MainTitle from "./MainTitle";
+
 const MainMenu = () => {
     return (
-        <div>
-            MainMenu
+        <div >
+            <div>
+            </div>
         </div>
     )
 }

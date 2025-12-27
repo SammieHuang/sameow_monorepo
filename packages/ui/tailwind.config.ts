@@ -57,6 +57,10 @@ const config: Config = {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+        cat: {
+          DEFAULT: "hsl(var(--cat))",
+          foreground:"hsl(var(--cat-foreground))",
+        }
       },
     },
   },

@@ -6,7 +6,14 @@ const meta: Meta<typeof SideBar> = {
     component: SideBar,
     parameters: {
         viewMode: 'docs'
-    }
+    },
+    decorators: [
+        (Story) => (
+            <div className='flex justify-center items-center'>
+                <Story />
+            </div>
+        )
+    ]
 }
 
 export default meta;
