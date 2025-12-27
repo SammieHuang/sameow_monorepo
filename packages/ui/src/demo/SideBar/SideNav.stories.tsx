@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import SideBar from './SideBar';
+import SideNav from './SideNav';
 
-const meta: Meta<typeof SideBar> = {
-    title: 'DEMO/SideBar',
-    component: SideBar,
+const meta: Meta<typeof SideNav> = {
+    title: 'Components/SideNav',
+    component: SideNav,
     parameters: {
         viewMode: 'docs'
     },
     decorators: [
         (Story) => (
-            <div className='flex justify-center items-center'>
+            <div className='flex justify-start items-center'>
                 <Story />
             </div>
         )
@@ -18,8 +18,8 @@ const meta: Meta<typeof SideBar> = {
 
 export default meta;
 
-type Story = StoryObj<typeof SideBar>;
+type Story = StoryObj<typeof SideNav>;
 
 export const Story: Story = {
-    name: 'SideBar'
+    name: 'SideNav'
 }
