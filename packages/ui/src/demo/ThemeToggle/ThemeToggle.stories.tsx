@@ -24,12 +24,6 @@ export const Default: Story = {
   }
 };
 
-export const Large: Story = {
-  args: {
-    size: 48
-  }
-}
-
 export const CustomizedIcon: Story = {
   args: {
     size: 24,
