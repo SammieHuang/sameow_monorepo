@@ -10,6 +10,7 @@ type MenuItemProps = {
 const MenuItem = ({ children, href, isActive }: MenuItemProps) => {
     
     return (
+        <li>
         <a
             href={href}
             className={cn('block w-full p-2 mt-2 hover:bg-white dark:hover:bg-zinc-700 rounded-md text-muted-foreground hover:text-foreground',
@@ -17,7 +18,8 @@ const MenuItem = ({ children, href, isActive }: MenuItemProps) => {
             )}
         >
          {children}
-        </a>
+            </a>
+        </li>
     )
 }
 
