@@ -1,5 +1,6 @@
 import { MoonIcon, SunIcon, type LucideIcon } from "lucide-react";
 import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider} from "@/components/ui/tooltip";
+import { Button } from "@/components/ui/button";
 import useTheme from "./useTheme";
 import { cn } from "@/lib/utils";
 
@@ -16,25 +17,26 @@ const ThemeToggle = ({size = 24, darkIcon, lightIcon, className, style, onClick,
     
     // Calculate padding based on icon size (approximately 1/3 of icon size, with minimum of 4px)
     const padding = Math.max(4, Math.round(size / 3));
+    const buttonSize = size + (padding * 2);
 
     return (
         <TooltipProvider>
             <Tooltip>
                 <TooltipTrigger asChild>
-                    <button
-                        className={cn('bg-transparent cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-200 dark:hover:text-black rounded-full transition-colors', className)}
-                        style={{ padding: `${padding}px`, ...style }}
+                    <Button
+                        variant="ghost"
+                        className={cn('cursor-pointer rounded-full border border-transparent hover:border-gray-300 dark:hover:border-gray-600 p-0 flex items-center justify-center', className)}
+                        style={{ width: `${buttonSize}px`, height: `${buttonSize}px`, ...style }}
                         aria-label={label}
                         aria-pressed={isDarkTheme}
                         onClick={(e) => {
                             toggleTheme();
                             onClick?.(e)
                         }}
-                        type='button'
                         {...props}
                     >
                         <Icon size={size} />         
-                    </button>
+                    </Button>
                 </TooltipTrigger>
                 <TooltipContent>
                     <span className='hidden dark:inline'>Enable Light Mode</span>
