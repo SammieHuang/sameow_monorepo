@@ -1,4 +1,5 @@
 import { MoonIcon, SunIcon, type LucideIcon } from "lucide-react";
+import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider} from "@/components/ui/tooltip";
 import useTheme from "./useTheme";
 import { cn } from "@/lib/utils";
 
@@ -17,20 +18,30 @@ const ThemeToggle = ({size = 24, darkIcon, lightIcon, className, style, onClick,
     const padding = Math.max(4, Math.round(size / 3));
 
     return (
-        <button
-            className={cn('bg-transparent cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-200 dark:hover:text-black rounded-full transition-colors', className)}
-            style={{ padding: `${padding}px`, ...style }}
-            aria-label={label}
-            aria-pressed={isDarkTheme}
-            onClick={(e) => {
-                toggleTheme();
-                onClick?.(e)
-            }}
-            type='button'
-            {...props}
-        >
-            <Icon size={size} />         
-        </button>
+        <TooltipProvider>
+            <Tooltip>
+                <TooltipTrigger asChild>
+                    <button
+                        className={cn('bg-transparent cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-200 dark:hover:text-black rounded-full transition-colors', className)}
+                        style={{ padding: `${padding}px`, ...style }}
+                        aria-label={label}
+                        aria-pressed={isDarkTheme}
+                        onClick={(e) => {
+                            toggleTheme();
+                            onClick?.(e)
+                        }}
+                        type='button'
+                        {...props}
+                    >
+                        <Icon size={size} />         
+                    </button>
+                </TooltipTrigger>
+                <TooltipContent>
+                    <span className='hidden dark:inline'>Enable Light Mode</span>
+                    <span className='block dark:hidden'>Enable Dark Mode</span>
+                </TooltipContent>
+            </Tooltip>
+        </TooltipProvider>
     )
 }
 
