@@ -25,8 +25,8 @@ const ThemeToggle = ({size = 24, darkIcon, lightIcon, className, style, onClick,
                 <TooltipTrigger asChild>
                     <Button
                         variant="ghost"
-                        className={cn('cursor-pointer rounded-full border border-transparent hover:border-gray-300 dark:hover:border-gray-600 p-0 flex items-center justify-center', className)}
-                        style={{ width: `${buttonSize}px`, height: `${buttonSize}px`, ...style }}
+                        className={cn('cursor-pointer rounded-full border border-transparent hover:border-gray-300 dark:hover:border-gray-600 bg-transparent hover:bg-transparent p-0 flex items-center justify-center', className)}
+                        style={{ width: `${buttonSize}px`, height: `${buttonSize}px`, backgroundColor: 'transparent', ...style }}
                         aria-label={label}
                         aria-pressed={isDarkTheme}
                         onClick={(e) => {
@@ -35,7 +35,7 @@ const ThemeToggle = ({size = 24, darkIcon, lightIcon, className, style, onClick,
                         }}
                         {...props}
                     >
-                        <Icon size={size} />         
+                        <Icon size={size} className="text-gray-900 dark:text-white" />         
                     </Button>
                 </TooltipTrigger>
                 <TooltipContent>
