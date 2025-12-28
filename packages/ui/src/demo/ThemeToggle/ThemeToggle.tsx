@@ -15,8 +15,8 @@ const ThemeToggle = ({size = 24, darkIcon, lightIcon, className, style, onClick,
     const Icon = isDarkTheme ? (darkIcon || MoonIcon) : (lightIcon || SunIcon);
     const label = isDarkTheme ? 'Switch to light theme' : 'Switch to dark theme';
     
-    // Calculate padding based on icon size (approximately 1/3 of icon size, with minimum of 4px)
-    const padding = Math.max(4, Math.round(size / 3));
+    // Calculate padding based on icon size (approximately 1/4 of icon size, with minimum of 2px)
+    const padding = Math.max(2, Math.round(size / 4));
     const buttonSize = size + (padding * 2);
 
     return (

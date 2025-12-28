@@ -3,7 +3,7 @@ import ThemeToggle from "../ThemeToggle/ThemeToggle"
 const MainMenuFooter = () => {
     return (
         <div className='flex items-center gap-2'>
-            <Avatar>
+            <Avatar className='h-8 w-8'>
                 <AvatarFallback className='bg-cat dark:bg-primary'>
                     SH
                 </AvatarFallback>
