@@ -4,7 +4,7 @@ const mockItem = ['My Dashboard', 'Teams', 'Employees', 'Accounts', 'Settings']
 
 const MainMenu = () => {
     return (
-        <div className='py-4'>
+        <div className='py-4 w-full'>
             {mockItem.map((item, index) => (
                 <MenuItem
                     key={`${item}-${index}`}
